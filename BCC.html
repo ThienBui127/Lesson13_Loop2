@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <table id="BCC" border="1px"></table>
     <script>
-        for (let i = 1; i<=10; i++){
-            let bcc = 2*i;
-            document.write("2x"+i+"="+bcc);
+        function showBcc() {
+            let str = "";
+            for (i = 2; i <= 10; i++) {
+                str += "<tr>"
+                for (let j = 2; j < 10; j++) {
+                    str += "<td>" + j + "x" + i + "=" + (j * i) + "</td>";
+                }
+
+                str += "<tr>"
+            }
+            document.getElementById("BCC").innerHTML = str;
         }
+        showBcc();
     </script>
 </body>
+
 </html>
